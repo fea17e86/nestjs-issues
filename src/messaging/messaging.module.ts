@@ -4,6 +4,7 @@ import { MessagingConnectionModule } from './messaging.connection.module';
 import { MessagingReceiverModule } from './messaging.receiver.module';
 
 const DEFAULT_CONNECTION = 'DEFAULT_CONNECTION';
+const DEFAULT_RECEIVER = 'DEFAULT_RECEIVER';
 
 @Module({})
 export class MessagingModule {
@@ -17,7 +18,7 @@ export class MessagingModule {
   static forReceiver(topic: string): DynamicModule {
     const provider = MessagingReceiverModule.createProvider(
       topic,
-      'TWEETS_RECEIVER',
+      DEFAULT_RECEIVER,
       DEFAULT_CONNECTION,
     );
 
