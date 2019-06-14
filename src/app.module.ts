@@ -1,10 +1,9 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+
+import { MessagingModule } from './messaging/messaging.module';
+import { TweetsModule } from './tweets/tweets.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [MessagingModule.forConnection('localhost:5672'), TweetsModule],
 })
 export class AppModule {}
