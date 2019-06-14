@@ -10,3 +10,5 @@ Error: Nest can't resolve dependencies of the TWEETS_RECEIVER (?). Please make s
      at Function.Module.runMain (internal/modules/cjs/loader.js:804:11)
      at internal/main/run_main_module.js:21:11
 ```
+
+In the [tutorial on how to use Mongoose](https://docs.nestjs.com/techniques/mongodb) you can see the same pattern, while MongooseModule.forRoot = MessagingModule.forConnection and MongooseModule.forFeature = MessagingModule.forReceiver.
